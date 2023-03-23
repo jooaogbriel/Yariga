@@ -7,6 +7,13 @@ import { Refine, AuthProvider} from '@pankod/refine-core';
 ,GlobalStyles
 ,ReadyPage
 ,ErrorComponent} from '@pankod/refine-mui';
+import {
+    AccountCircleOutlined,
+    ChatBubbleOutlined,
+    PeopleAltOutlined,
+    StarOutlineRounded,
+    VillaOutlined
+} from '@mui/icons-material'
 
 import dataProvider from "@pankod/refine-simple-rest";
 import { MuiInferencer } from "@pankod/refine-inferencer/mui";
@@ -16,7 +23,19 @@ import { useTranslation } from "react-i18next";
 import { RefineKbarProvider } from "@pankod/refine-kbar";
 import { ColorModeContextProvider } from "contexts";
 import { Title, Sider, Layout, Header } from "components/layout"
-import { Login } from "pages/login";
+import { 
+    Login, 
+    Home, 
+    Agents, 
+    MyProfile, 
+    PropertyDetails, 
+    AllProperties, 
+    CreateProperty, 
+    AgentProfile, 
+    EditProperty 
+} 
+from "pages";
+
 import { CredentialResponse } from "interfaces/google";
 import { parseJwt } from "utils/parse-jwt";
 import { OffLayoutArea } from "components/offLayoutArea"
@@ -113,12 +132,41 @@ ReadyPage={ReadyPage}
 catchAll={<ErrorComponent />}
 resources={[
                     {
-                        name: "posts",
-                        list: MuiInferencer,
-                        edit: MuiInferencer,
-                        show: MuiInferencer,
-                        create: MuiInferencer,
-                        canDelete: true,
+                        name: "properties",
+                        list: AllProperties,
+                        show: PropertyDetails,
+                        create: CreateProperty,
+                        edit: EditProperty,
+                        icon: <VillaOutlined/>,
+
+                    },
+                    {
+                        name: "agents",
+                        list: Agents,
+                        show: AgentProfile,
+                        icon: <PeopleAltOutlined/>
+                        
+                    },
+                    {
+                        name: "reviews",
+                        list: Home,
+                        icon: <StarOutlineRounded/>
+                        
+                    },
+                    {
+                        name: "messages",
+                        list: Home,
+                        icon: <ChatBubbleOutlined/>
+                        
+                    },
+                    {
+                        name: "my-profile",
+                        options: {
+                            label:'My Profile'
+                        },
+                        list: MyProfile,
+                        icon: <AccountCircleOutlined/>
+                        
                     },
                 ]}
 Title={Title}
@@ -128,6 +176,7 @@ Header={Header}
 routerProvider={routerProvider}
 authProvider={authProvider}
 LoginPage={Login}
+DashboardPage={Home}
 i18nProvider={i18nProvider}
 OffLayoutArea={OffLayoutArea} />
         </RefineKbarProvider>

@@ -1,5 +1,5 @@
 export interface IdConfiguration {
-    client_id: string;
+    client_id: any;
     auto_select?: boolean;
     callback: (handleCredentialResponse: CredentialResponse) => void;
     login_uri?: string;
