@@ -26,6 +26,9 @@ const Allproperties = () => {
             icon={ <Add /> }
           />
       </Stack>  
+      <Box mt='20px' sx={{ display: 'flex', flexWrap: 'wrap' }}>
+
+      </Box>
     </Box>
   )
 }

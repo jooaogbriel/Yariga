@@ -6,9 +6,8 @@ import { useNavigate } from '@pankod/refine-react-router-v6';
 import Form from 'components/common/Form';
 
 const CreateProperty = () => {
-  const { data: user } = useGetIdentity({
-       //v3LegacyAuthProviderCompatible: true,
-  });
+  const navigate = useNavigate()
+  const {data: user} = useGetIdentity()
   const [propertyImage, setPropertyImage] = useState({ name: "", url: "" });
   const {
       refineCore: { onFinish, formLoading },
