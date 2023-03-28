@@ -3,9 +3,7 @@ import { useDelete, useGetIdentity, useShow } from "@pankod/refine-core";
 import { useParams, useNavigate } from "react-router-dom";
 import {
     ChatBubble,
-    Delete,
     Edit,
-    Phone,
     Place,
     Star,
 } from "@mui/icons-material";

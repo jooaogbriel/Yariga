@@ -167,18 +167,18 @@ resources={[
                         icon: <PeopleAltOutlined/>
                         
                     },
-                    {
-                        name: "reviews",
-                        list: Home,
-                        icon: <StarOutlineRounded/>
+                    // {
+                    //     name: "reviews",
+                    //     list: Home,
+                    //     icon: <StarOutlineRounded/>
                         
-                    },
-                    {
-                        name: "messages",
-                        list: Home,
-                        icon: <ChatBubbleOutlined/>
+                    // },
+                    // {
+                    //     name: "messages",
+                    //     list: Home,
+                    //     icon: <ChatBubbleOutlined/>
                         
-                    },
+                    // },
                     {
                         name: "my-profile",
                         options: {

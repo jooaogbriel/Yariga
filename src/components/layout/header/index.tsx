@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   useGetIdentity,
   useGetLocale,
@@ -6,22 +6,14 @@ import {
 } from "@pankod/refine-core";
 import {
   AppBar,
-  IconButton,
   Avatar,
   Stack,
-  FormControl,
-  MenuItem,
-  Select,
   Toolbar,
   Typography,
 } from "@pankod/refine-mui";
-import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 
-import { ColorModeContext } from "contexts";
-import i18n from "i18n";
 
 export const Header: React.FC = () => {
-  const { mode, setMode } = useContext(ColorModeContext);
 
   const changeLanguage = useSetLocale();
   const locale = useGetLocale();
@@ -46,7 +38,7 @@ export const Header: React.FC = () => {
           >
             {mode === "dark" ? <LightModeOutlined /> : <DarkModeOutlined />}
           </IconButton> */}
-          <FormControl sx={{ m: 1, minWidth: 120 }}>
+          {/* <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Select
               disableUnderline
               defaultValue={currentLocale}
@@ -81,7 +73,7 @@ export const Header: React.FC = () => {
                 </MenuItem>
               ))}
             </Select>
-          </FormControl>
+          </FormControl> */}
           {showUserInfo && (
             <Stack direction="row" gap="16px" alignItems="center">
               {user.avatar && <Avatar src={user?.avatar} alt={user?.name} />}
