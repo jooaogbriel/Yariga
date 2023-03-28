@@ -2,11 +2,11 @@ import { ApexOptions } from 'apexcharts';
 
 export const TotalRevenueSeries = [
   {
-    name: 'Last Month',
+    name: 'Último mês',
     data: [183, 124, 115, 85, 143, 143, 96],
   },
   {
-    name: 'Running Month',
+    name: 'Mês Corrente',
     data: [95, 84, 72, 44, 108, 108, 47],
   },
 ];
@@ -37,11 +37,11 @@ export const TotalRevenueOptions: ApexOptions = {
     width: 4,
   },
   xaxis: {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+    categories: ['Jan', 'Feb', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul'],
   },
   yaxis: {
     title: {
-      text: '$ (thousands)',
+      text: 'R$ (mil)',
     },
   },
   fill: {
@@ -54,7 +54,7 @@ export const TotalRevenueOptions: ApexOptions = {
   tooltip: {
     y: {
       formatter(val: number) {
-        return `$ ${val} thousands`;
+        return `$ ${val} mil`;
       },
     },
   },

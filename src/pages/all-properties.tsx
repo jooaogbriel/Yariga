@@ -54,8 +54,8 @@ const AllProperties = () => {
               <Stack direction="column" width="100%">
                   <Typography fontSize={25} fontWeight={700} color="#11142d">
                       {!allProperties.length
-                          ? "There are no properties"
-                          : "All Properties"}
+                          ? "Não há propriedades"
+                          : "Todas as Propriedades"}
                   </Typography>
                   <Box
                       mb={2}
@@ -72,7 +72,7 @@ const AllProperties = () => {
                           mb={{ xs: "20px", sm: 0 }}
                       >
                           <CustomButton
-                              title={`Sort price ${
+                              title={`Ordenar preço ${
                                   currentPrice === "asc" ? "↑" : "↓"
                               }`}
                               handleClick={() => toggleSort("price")}
@@ -82,7 +82,7 @@ const AllProperties = () => {
                           <TextField
                               variant="outlined"
                               color="info"
-                              placeholder="Search by title"
+                              placeholder="Pesquisar por título"
                               value={currentFilterValues.title}
                               onChange={(e) => {
                                   setFilters([
@@ -117,7 +117,7 @@ const AllProperties = () => {
                                   );
                               }}
                           >
-                              <MenuItem value="">All</MenuItem>
+                              <MenuItem value="">Todos</MenuItem>
                               {[
                                   "Apartment",
                                   "Villa",
@@ -147,7 +147,7 @@ const AllProperties = () => {
               alignItems="center"
           >
               <CustomButton
-                  title="Add Property"
+                  title="Adicionar Propriedade"
                   handleClick={() => navigate("/properties/create")}
                   backgroundColor="#475be8"
                   color="#fcfcfc"
@@ -171,7 +171,7 @@ const AllProperties = () => {
           {allProperties.length > 0 && (
               <Box display="flex" gap={2} mt={3} flexWrap="wrap">
                   <CustomButton
-                      title="Previous"
+                      title="Anterior"
                       handleClick={() => setCurrent((prev) => prev - 1)}
                       backgroundColor="#475be8"
                       color="#fcfcfc"
@@ -182,13 +182,13 @@ const AllProperties = () => {
                       alignItems="center"
                       gap="5px"
                   >
-                      Page{" "}
+                      Página{" "}
                       <strong>
-                          {current} of {pageCount}
+                          {current} de {pageCount}
                       </strong>
                   </Box>
                   <CustomButton
-                      title="Next"
+                      title="Próximo"
                       handleClick={() => setCurrent((prev) => prev + 1)}
                       backgroundColor="#475be8"
                       color="#fcfcfc"
@@ -209,7 +209,7 @@ const AllProperties = () => {
                   >
                       {[10, 20, 30, 40, 50].map((size) => (
                           <MenuItem key={size} value={size}>
-                              Show {size}
+                              Mostrar {size}
                           </MenuItem>
                       ))}
                   </Select>

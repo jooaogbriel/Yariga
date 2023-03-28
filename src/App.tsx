@@ -155,6 +155,9 @@ resources={[
                         name: "properties",
                         list: AllProperties,
                         show: PropertyDetails,
+                        options: {
+                            label:'Propriedades'
+                        },
                         create: CreateProperty,
                         edit: EditProperty,
                         icon: <VillaOutlined/>,
@@ -162,6 +165,9 @@ resources={[
                     },
                     {
                         name: "agents",
+                        options: {
+                            label:'Corretores'
+                        },
                         list: Agents,
                         show: AgentProfile,
                         icon: <PeopleAltOutlined/>
@@ -182,7 +188,7 @@ resources={[
                     {
                         name: "my-profile",
                         options: {
-                            label:'My Profile'
+                            label:'Meu Perfil'
                         },
                         list: MyProfile,
                         icon: <AccountCircleOutlined/>

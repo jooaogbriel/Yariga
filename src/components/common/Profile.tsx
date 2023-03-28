@@ -72,7 +72,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                     {name}
                                 </Typography>
                                 <Typography fontSize={16} color="#808191">
-                                    Realestate Agent
+                                Corretor de imóveis
                                 </Typography>
                             </Stack>
 
@@ -83,7 +83,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                         fontWeight={500}
                                         color="#808191"
                                     >
-                                        Address
+                                        Endereço
                                     </Typography>
                                     <Box
                                         display="flex"
@@ -96,8 +96,8 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                             fontSize={14}
                                             color="#11142D"
                                         >
-                                            4517 Washington Ave. Manchaster,
-                                            Kentucky 39495
+                                            4517 Avenida Paulista. São Paulo
+                                            
                                         </Typography>
                                     </Box>
                                 </Stack>
@@ -114,7 +114,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                             fontWeight={500}
                                             color="#808191"
                                         >
-                                            Phone Number
+                                            Número de Telefone
                                         </Typography>
                                         <Box
                                             display="flex"

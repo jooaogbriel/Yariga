@@ -35,19 +35,19 @@ export const Home = () => {
                     colors={["#275be8", "#c4e8ef"]}
                 />
                 <PieChart
-                    title="Properties for Rent"
+                    title="Propriedades para alugar"
                     value={550}
                     series={[60, 40]}
                     colors={["#275be8", "#c4e8ef"]}
                 />
                 <PieChart
-                    title="Total customers"
+                    title="Total de clientes"
                     value={5684}
                     series={[75, 25]}
                     colors={["#275be8", "#c4e8ef"]}
                 />
                 <PieChart
-                    title="Properties for Cities"
+                    title="Propriedades para Cidades"
                     value={555}
                     series={[75, 25]}
                     colors={["#275be8", "#c4e8ef"]}
@@ -69,7 +69,7 @@ export const Home = () => {
                 mt="25px"
             >
                 <Typography fontSize="18px" fontWeight={600} color="#11142d">
-                    Latest Properties
+                Últimas propriedades
                 </Typography>
 
                 <Box
